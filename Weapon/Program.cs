@@ -15,6 +15,9 @@
 
         public void Fire(Player player)
         {
+            if (_bullets < 1)
+                return;
+
             player.TakeDamage(_damage);
             _bullets --;
         }
@@ -27,9 +30,7 @@
         public void TakeDamage(int damage)
         {
             if (damage < 0)
-            {
                 return;
-            }
 
             _health -= damage;
 
