@@ -1,0 +1,7 @@
+C:\проэкты\Weapon\Weapon\bin\Debug\Weapon.exe.config
+C:\проэкты\Weapon\Weapon\bin\Debug\Weapon.exe
+C:\проэкты\Weapon\Weapon\bin\Debug\Weapon.pdb
+C:\проэкты\Weapon\Weapon\obj\Debug\Weapon.csproj.AssemblyReference.cache
+C:\проэкты\Weapon\Weapon\obj\Debug\Weapon.csproj.CoreCompileInputs.cache
+C:\проэкты\Weapon\Weapon\obj\Debug\Weapon.exe
+C:\проэкты\Weapon\Weapon\obj\Debug\Weapon.pdb
