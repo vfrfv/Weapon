@@ -53,13 +53,17 @@ namespace Weapon
 
             if (_health < 0)
                 _health = 0;
-
         }
     }
 
     class Bot
     {
-        private Weapon _weapon = new Weapon(1, 3);
+        private Weapon _weapon;
+
+        public Bot(Weapon weapon)
+        {
+            _weapon = weapon ?? throw new ArgumentNullException(nameof(weapon));
+        }
 
         private void OnSeePlayer(Player player)
         {
