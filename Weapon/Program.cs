@@ -12,8 +12,6 @@ namespace Weapon
     class Weapon
     {
         private readonly int _damage;
-        private int _bullets;
-
 
         public Weapon(int damage, int bullets)
         {
@@ -28,19 +26,19 @@ namespace Weapon
             }
 
             _damage = damage;
-            _bullets = bullets;
+            Bullets = bullets;
         }
 
-        public int Bullets => _bullets;
+        public int Bullets { get  ; private set; }
 
         public void Fire(Player player)
         {
             if (player is null)
                 throw new ArgumentNullException(nameof(player));
 
-            if (_bullets > 0)
+            if (Bullets > 0)
             {
-                _bullets--;
+                Bullets--;
                 player.TakeDamage(_damage);
             }
         }
@@ -71,12 +69,14 @@ namespace Weapon
             _weapon = weapon ?? throw new ArgumentNullException(nameof(weapon));
         }
 
+        public bool HasBullets => _weapon.Bullets > 0;
+
         public void OnSeePlayer(Player player)
         {
             if (player is null)
                 throw new ArgumentNullException(nameof(player));
 
-            if (_weapon.Bullets > 0)
+            if (HasBullets)
             {
                 _weapon.Fire(player);
             }
